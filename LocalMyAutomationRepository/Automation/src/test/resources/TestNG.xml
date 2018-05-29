@@ -1,0 +1,10 @@
+<suite name="Firsttestsuite" verbose="1" >
+
+
+  <test name="Firsttest" >
+    <classes>
+       <class name="com.dice.FirstTest" />
+    </classes>
+  </test>
+
+</suite>
