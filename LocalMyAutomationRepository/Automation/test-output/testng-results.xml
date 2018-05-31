@@ -2,24 +2,24 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="11806" started-at="2018-05-29T18:04:22Z" finished-at="2018-05-29T18:04:34Z">
+  <suite name="Default suite" duration-ms="15227" started-at="2018-05-31T15:43:07Z" finished-at="2018-05-31T15:43:22Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="11806" started-at="2018-05-29T18:04:22Z" finished-at="2018-05-29T18:04:34Z">
-      <class name="com.dice.tc_001_clickonRegistration">
-        <test-method status="PASS" signature="SetupDriver()[pri:0, instance:com.dice.tc_001_clickonRegistration@5e5792a0]" name="SetupDriver" is-config="true" duration-ms="7221" started-at="2018-05-29T18:04:22Z" finished-at="2018-05-29T18:04:29Z">
+    <test name="Default test" duration-ms="15227" started-at="2018-05-31T15:43:07Z" finished-at="2018-05-31T15:43:22Z">
+      <class name="com.dice.LoginTest">
+        <test-method status="PASS" signature="SetupDriver()[pri:0, instance:com.dice.LoginTest@5e5792a0]" name="SetupDriver" is-config="true" duration-ms="13304" started-at="2018-05-31T15:43:08Z" finished-at="2018-05-31T15:43:21Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- SetupDriver -->
-        <test-method status="PASS" signature="Registration()[pri:0, instance:com.dice.tc_001_clickonRegistration@5e5792a0]" name="Registration" duration-ms="3753" started-at="2018-05-29T18:04:29Z" finished-at="2018-05-29T18:04:33Z">
+        <test-method status="PASS" signature="positiveLoginTest()[pri:0, instance:com.dice.LoginTest@5e5792a0]" name="positiveLoginTest" duration-ms="664" started-at="2018-05-31T15:43:21Z" finished-at="2018-05-31T15:43:21Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Registration -->
-        <test-method status="PASS" signature="teardown()[pri:0, instance:com.dice.tc_001_clickonRegistration@5e5792a0]" name="teardown" is-config="true" duration-ms="809" started-at="2018-05-29T18:04:33Z" finished-at="2018-05-29T18:04:34Z">
+        </test-method> <!-- positiveLoginTest -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:com.dice.LoginTest@5e5792a0]" name="teardown" is-config="true" duration-ms="712" started-at="2018-05-31T15:43:21Z" finished-at="2018-05-31T15:43:22Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-      </class> <!-- com.dice.tc_001_clickonRegistration -->
+      </class> <!-- com.dice.LoginTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

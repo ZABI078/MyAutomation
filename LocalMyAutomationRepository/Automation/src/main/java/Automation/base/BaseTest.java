@@ -11,7 +11,7 @@ import org.testng.annotations.BeforeMethod;
 
 import Automation.utilites.Utility;
 
-public class DriverInstance {
+public class BaseTest {
 	
 	public WebDriver driver;
 	
@@ -48,7 +48,6 @@ public class DriverInstance {
 				driver = new ChromeDriver();
 			}
 		
-				driver.get(Utility.fetchProperty("ApplicationUrl").toString());
 	}
 	
 	@AfterMethod

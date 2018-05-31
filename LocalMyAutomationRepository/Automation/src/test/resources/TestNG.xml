@@ -6,5 +6,13 @@
        <class name="com.dice.FirstTest" />
     </classes>
   </test>
+  
+  
+    <test name="Registration" >
+    <classes>
+       <class name="com.dice.tc_001_clickonRegistration" />
+    </classes>
+  </test>
+
 
 </suite>

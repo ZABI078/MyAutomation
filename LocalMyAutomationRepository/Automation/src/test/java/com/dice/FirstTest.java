@@ -6,16 +6,18 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-import Automation.base.DriverInstance;
+import Automation.base.BaseTest;
+import Automation.utilites.Utility;
 
-public class FirstTest extends DriverInstance{
+public class FirstTest extends BaseTest{
 	
-	
+
 		
 	@Test
 	public void FirstTestMethod ( ) 
 	
 	{
+		
 		
 		//Open Dice website
 				
@@ -24,12 +26,5 @@ public class FirstTest extends DriverInstance{
 	}
 	
 	
-	@Test
-	public void SecondTestMethod ()  
-	
-	{
-		
-		
-	}
 
 }
