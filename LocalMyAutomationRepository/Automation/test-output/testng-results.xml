@@ -2,20 +2,20 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="15227" started-at="2018-05-31T15:43:07Z" finished-at="2018-05-31T15:43:22Z">
+  <suite name="Default suite" duration-ms="13572" started-at="2018-05-31T17:52:25Z" finished-at="2018-05-31T17:52:38Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="15227" started-at="2018-05-31T15:43:07Z" finished-at="2018-05-31T15:43:22Z">
+    <test name="Default test" duration-ms="13572" started-at="2018-05-31T17:52:25Z" finished-at="2018-05-31T17:52:38Z">
       <class name="com.dice.LoginTest">
-        <test-method status="PASS" signature="SetupDriver()[pri:0, instance:com.dice.LoginTest@5e5792a0]" name="SetupDriver" is-config="true" duration-ms="13304" started-at="2018-05-31T15:43:08Z" finished-at="2018-05-31T15:43:21Z">
+        <test-method status="PASS" signature="SetupDriver()[pri:0, instance:com.dice.LoginTest@5e5792a0]" name="SetupDriver" is-config="true" duration-ms="6201" started-at="2018-05-31T17:52:25Z" finished-at="2018-05-31T17:52:31Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- SetupDriver -->
-        <test-method status="PASS" signature="positiveLoginTest()[pri:0, instance:com.dice.LoginTest@5e5792a0]" name="positiveLoginTest" duration-ms="664" started-at="2018-05-31T15:43:21Z" finished-at="2018-05-31T15:43:21Z">
+        <test-method status="PASS" signature="positiveLoginTest()[pri:0, instance:com.dice.LoginTest@5e5792a0]" name="positiveLoginTest" duration-ms="6522" started-at="2018-05-31T17:52:31Z" finished-at="2018-05-31T17:52:37Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- positiveLoginTest -->
-        <test-method status="PASS" signature="teardown()[pri:0, instance:com.dice.LoginTest@5e5792a0]" name="teardown" is-config="true" duration-ms="712" started-at="2018-05-31T15:43:21Z" finished-at="2018-05-31T15:43:22Z">
+        <test-method status="PASS" signature="teardown()[pri:0, instance:com.dice.LoginTest@5e5792a0]" name="teardown" is-config="true" duration-ms="738" started-at="2018-05-31T17:52:37Z" finished-at="2018-05-31T17:52:38Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
