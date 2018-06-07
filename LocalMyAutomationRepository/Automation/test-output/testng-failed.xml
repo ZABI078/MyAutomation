@@ -5,8 +5,9 @@
     <classes>
       <class name="com.dice.LoginTest">
         <methods>
+          <include name="TestSetup"/>
           <include name="teardown"/>
-          <include name="SignOut"/>
+          <include name="positiveLoginTest"/>
           <include name="SetupDriver"/>
         </methods>
       </class> <!-- com.dice.LoginTest -->

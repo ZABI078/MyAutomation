@@ -1,18 +1,17 @@
 <suite name="Firsttestsuite" verbose="1" >
 
 
-  <test name="Firsttest" >
-    <classes>
-       <class name="com.dice.FirstTest" />
-    </classes>
-  </test>
-  
-  
-    <test name="Registration" >
-    <classes>
-       <class name="com.dice.tc_001_clickonRegistration" />
-    </classes>
-  </test>
+<listeners>
+		<listener class-name="ExtentReportListener.ExtentReporterNG" />
+	</listeners>
 
+
+  <test name="negativeLoginTest" >
+    <classes>
+       <class name="com.dice.LoginTest" />
+    </classes>
+  </test>
+  
+ 
 
 </suite>

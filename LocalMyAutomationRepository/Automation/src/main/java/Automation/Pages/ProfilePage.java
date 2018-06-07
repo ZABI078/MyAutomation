@@ -27,5 +27,10 @@ public class ProfilePage extends BasePageObject<ProfilePage> {
 		
 
 	}
+	
+	public void chooseFile (String filePath) throws IOException {
+		
+		driver.findElement(By.xpath(Utility.fetchLocatorValue("FileUpload_xpath"))).sendKeys(filePath);
+	}
 
 }
