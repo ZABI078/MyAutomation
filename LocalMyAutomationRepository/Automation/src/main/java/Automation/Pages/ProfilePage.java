@@ -12,6 +12,8 @@ import Automation.utilites.Utility;
 public class ProfilePage extends BasePageObject<ProfilePage> {
 	private By editProfilebttn = By.xpath("//button[@id = 'editProfile']");
 	private By advanceSearchButtom = By.xpath("//a[@class='dice-btn-link'']");
+	private By clickOnAddFNLink = By.xpath("//*[@id=\"topDiscoverable\"]/ol/li[1]/a");
+	private By EnterFN = By.xpath("//*[@id=\"contactFirstNameInput\"]");
 
 	public ProfilePage(WebDriver driver) {
 		super(driver);
@@ -44,4 +46,19 @@ public class ProfilePage extends BasePageObject<ProfilePage> {
 		waitForVisibilityof(editProfilebttn);
 		//waitForVisibilityof(advanceSearchButtom, 10);
 	}
+	
+	public void clickOnAddFNLink ()
+	
+	{
+		driver.findElement(clickOnAddFNLink).click();
+	}
+	
+	
+
+	public void EnterFN(String fN) {
+
+		driver.findElement(EnterFN).sendKeys(fN);
+		
+	}
+
 }

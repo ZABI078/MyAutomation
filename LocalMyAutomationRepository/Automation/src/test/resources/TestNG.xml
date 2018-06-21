@@ -6,17 +6,18 @@
 	</listeners>
 
 
-  <test name="negativeLoginTest" >
+  <test name="completeProfileTest" >
     <classes>
-       <class name="com.dice.LoginTest" >
+       <class name="com.dice.ProfileTest" >
        
        <methods>
-        <exclude name="negativeLoginTest" />
+        <exclude name="completeProfileTest" />
       </methods>
        
        </class>>
     </classes>
   </test>
+  
   
  
 
