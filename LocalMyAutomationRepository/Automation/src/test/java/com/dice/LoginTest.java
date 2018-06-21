@@ -15,13 +15,13 @@ import Automation.base.BaseTest;
 public class LoginTest extends BaseTest{
 
 	LoginPage login;
-	ProfilePage profile;
+
 	
 	@BeforeMethod
 	public void TestSetup () {
 		
 		login = new LoginPage(driver);
-		profile = new ProfilePage(driver);
+		
 	}
 	
 	
@@ -40,13 +40,15 @@ public class LoginTest extends BaseTest{
 		
 		
 		login.openLoginPage();
+		login.getCurrentUrl();
 		login.fillupEmailAndPassword("testautomation@mailinator.com", "Test1234!!");
 		login.VerifyLoginEmailGreenCheck();
 		Thread.sleep(3000);
-//		login.clickSignInbttn();
-//		login.getTitleofthePage();
-//		login.getCurrentUrl();
-//		
+		ProfilePage profile = login.clickSignInbttn();
+		profile.WaitForProfilePageToLoad();
+
+		
+	
 //		robot.setAutoDelay(2000);
 //		
 //		StringSelection stringselection= new StringSelection("\\\\commonapp-ad01\\users\\jaurangzeb\\Documents\\AutoTEST.docx");
@@ -63,13 +65,10 @@ public class LoginTest extends BaseTest{
 //		robot.keyPress(KeyEvent.VK_ENTER);
 //		robot.keyRelease(KeyEvent.VK_ENTER);
 
+		profile.clickProfileName();
+			
+		profile.clickonSignOut();
 		
-		
-//		profile.chooseFile(filePath);
-//		
-//		profile.clickProfileName();
-//		Thread.sleep(1000);
-//		profile.clickonSignOut();
-//		
+	
 	}
 }

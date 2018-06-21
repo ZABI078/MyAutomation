@@ -8,7 +8,13 @@
 
   <test name="negativeLoginTest" >
     <classes>
-       <class name="com.dice.LoginTest" />
+       <class name="com.dice.LoginTest" >
+       
+       <methods>
+        <exclude name="negativeLoginTest" />
+      </methods>
+       
+       </class>>
     </classes>
   </test>
   

@@ -32,9 +32,10 @@ public class LoginPage extends BasePageObject<LoginPage>{
 		
 	}
 	
-	public void clickSignInbttn() throws Exception {
+	public ProfilePage clickSignInbttn() throws Exception {
 		
 		driver.findElement(By.xpath(Utility.fetchLocatorValue("signIn_button_xpath"))).click();
+		return new ProfilePage(driver);
 		
 	}
 	
