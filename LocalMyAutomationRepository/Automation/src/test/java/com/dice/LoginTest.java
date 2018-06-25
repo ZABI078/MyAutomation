@@ -5,6 +5,7 @@ import java.awt.Toolkit;
 import java.awt.datatransfer.StringSelection;
 import java.awt.event.KeyEvent;
 
+import org.openqa.selenium.WebDriver;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -14,6 +15,8 @@ import Automation.base.BaseTest;
 
 public class LoginTest extends BaseTest{
 
+
+
 	LoginPage login;
 
 	
@@ -22,14 +25,16 @@ public class LoginTest extends BaseTest{
 		
 		login = new LoginPage(driver);
 		
+	
+		
 	}
 	
 	
 	@Test (priority = 1)
 	public void negativeLoginTest () throws Exception {
 		
-		login.openLoginPage();
-		login.fillupEmailAndPassword("1222", "abac11");
+		Initialize("jajd", "1333");
+		login.clickSignInbttn();
 		Thread.sleep(3000);
 		login.verifyEmailFieldErrorMessage();
 	}
@@ -39,9 +44,9 @@ public class LoginTest extends BaseTest{
 		
 		
 		
-		login.openLoginPage();
+		Initialize("testautomation@mailinator.com", "Test1234!!");
 		login.getCurrentUrl();
-		login.fillupEmailAndPassword("testautomation@mailinator.com", "Test1234!!");
+		//login.fillupEmailAndPassword("testautomation@mailinator.com", "Test1234!!");
 		login.VerifyLoginEmailGreenCheck();
 		Thread.sleep(3000);
 		ProfilePage profile = login.clickSignInbttn();

@@ -2,17 +2,22 @@ package Automation.base;
 
 import java.io.IOException;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
 import Automation.utilites.Utility;
 
-public class BaseTest {
+public class BaseTest{
 	
+		
+	
+
 	public WebDriver driver;
 	
 	@BeforeMethod
@@ -48,6 +53,21 @@ public class BaseTest {
 				driver = new ChromeDriver();
 			}
 		
+	}
+	
+	public void Initialize (String email, String password) throws IOException {
+		
+		driver.get(Utility.fetchProperty("ApplicationUrl").toString());
+		driver.findElement(By.xpath(Utility.fetchLocatorValue("email_field_xpath"))).sendKeys(email);
+		driver.findElement(By.xpath(Utility.fetchLocatorValue("password_field_xpath"))).sendKeys(password);
+
+	}
+	
+	public boolean VerifyTextOnthePagae(String textToCheck, boolean status) {
+		
+		boolean VerifyText = driver.getPageSource().contains(textToCheck);
+		Assert.assertEquals(VerifyText, status);
+		return VerifyText;
 	}
 	
 	@AfterMethod

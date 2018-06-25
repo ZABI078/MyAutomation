@@ -5,10 +5,10 @@
     <classes>
       <class name="com.dice.ProfileTest">
         <methods>
+          <include name="completeProfileTest"/>
           <include name="teardown"/>
           <include name="TestSetup"/>
           <include name="SetupDriver"/>
-          <include name="completeProfile"/>
         </methods>
       </class> <!-- com.dice.ProfileTest -->
     </classes>

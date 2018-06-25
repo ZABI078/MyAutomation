@@ -8,6 +8,7 @@ import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 
 import Automation.base.BasePageObject;
+import Automation.base.BaseTest;
 import Automation.utilites.Utility;
 
 public class LoginPage extends BasePageObject<LoginPage>{
@@ -18,19 +19,8 @@ public class LoginPage extends BasePageObject<LoginPage>{
 	}
 
 	
-	public void openLoginPage() throws Exception {
-		
-		getPage();
-		
-	}
-	
-	public void fillupEmailAndPassword (String email, String password) throws Exception {
-		
-		driver.findElement(By.xpath(Utility.fetchLocatorValue("email_field_xpath"))).sendKeys(email);
-		driver.findElement(By.xpath(Utility.fetchLocatorValue("password_field_xpath"))).sendKeys(password);
 
-		
-	}
+	
 	
 	public ProfilePage clickSignInbttn() throws Exception {
 		
@@ -88,4 +78,5 @@ public class LoginPage extends BasePageObject<LoginPage>{
 		}
 	
 	}
+	
 }

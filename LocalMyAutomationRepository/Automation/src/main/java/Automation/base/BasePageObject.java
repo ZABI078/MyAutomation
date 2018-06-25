@@ -9,7 +9,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 
+import Automation.Pages.LoginPage;
 import Automation.utilites.Utility;
 
 public class BasePageObject<T> {
@@ -24,12 +26,6 @@ public class BasePageObject<T> {
 		wait = new WebDriverWait(driver, 40);
 	}
 	
-	protected T getPage () throws Exception {
-		
-		driver.get(Utility.fetchProperty("ApplicationUrl").toString());
-		return (T) this;
-
-	}
 	
 	protected void waitForVisibilityof(By locator, Integer... timeOutInSeconds ) 
 	
@@ -55,6 +51,5 @@ public class BasePageObject<T> {
 		wait.until(condition);
 	}
 	
-	
-	
+
 }

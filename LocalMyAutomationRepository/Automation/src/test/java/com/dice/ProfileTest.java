@@ -1,5 +1,8 @@
 package com.dice;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -20,32 +23,32 @@ public class ProfileTest extends BaseTest{
 		login = new LoginPage(driver);
 		profile = new ProfilePage(driver);
 		
-
-		login.openLoginPage();
-		login.getCurrentUrl();
-		login.fillupEmailAndPassword("testautomation@mailinator.com", "Test1234!!");
+		Initialize("testautomation@mailinator.com", "Test1234!!");
 		login.VerifyLoginEmailGreenCheck();
 		Thread.sleep(3000);
 		login.clickSignInbttn();
-		profile.WaitForProfilePageToLoad();
+		
 		
 	}
 	
 	
 	@Test
 	public void completeProfileTest() throws Exception {
-		
-		
-		
-		Thread.sleep(10000);
-		profile.clickOnAddFNLink();
+
+		profile.WaitForProfilePageToLoad();
+		profile.clickOnEditProfile();
 		profile.EnterFN("David");
-
-
+		profile.EnterLN("Smith");
+		profile.EnterPhN("777-777-7777");
+		profile.skill1("Facebook");
+		profile.skill2("twitter");
+		profile.skill3("Personal Website");
+		profile.skill4("Linkdin");
+		profile.clickonDonebttn();
+		VerifyTextOnthePagae("chris", true);
+		
+		
 	}
-
-	
-	
 
 
 }
