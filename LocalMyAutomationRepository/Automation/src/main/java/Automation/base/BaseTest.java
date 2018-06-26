@@ -1,24 +1,39 @@
 package Automation.base;
 
+import java.io.File;
 import java.io.IOException;
 
+import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.testng.Assert;
+import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeTest;
+
+import com.relevantcodes.extentreports.ExtentReports;
+import com.relevantcodes.extentreports.ExtentTest;
+import com.relevantcodes.extentreports.LogStatus;
 
 import Automation.utilites.Utility;
 
 public class BaseTest{
 	
-		
+
+
+	
+	
+	
+	public WebDriver driver;
+	
 	
 
-	public WebDriver driver;
+
 	
 	@BeforeMethod
 	public void SetupDriver () throws Exception 
@@ -60,6 +75,7 @@ public class BaseTest{
 		driver.get(Utility.fetchProperty("ApplicationUrl").toString());
 		driver.findElement(By.xpath(Utility.fetchLocatorValue("email_field_xpath"))).sendKeys(email);
 		driver.findElement(By.xpath(Utility.fetchLocatorValue("password_field_xpath"))).sendKeys(password);
+		
 
 	}
 	
@@ -70,6 +86,8 @@ public class BaseTest{
 		return VerifyText;
 	}
 	
+
+	
 	@AfterMethod
 	public void teardown () 
 	
@@ -77,4 +95,6 @@ public class BaseTest{
 		
 		driver.quit();
 	}
+	
+
 }

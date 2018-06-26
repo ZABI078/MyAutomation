@@ -110,7 +110,7 @@ public class ProfilePage extends BasePageObject<ProfilePage> {
 	
 	public void skill4(String s4) {
 		
-		driver.findElement(Skill4).clear();
+		driver.findElement(Skill4).click();
 		driver.findElement(Skill4).sendKeys(s4);
 	}
 	

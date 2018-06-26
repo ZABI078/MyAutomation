@@ -3,8 +3,14 @@ package com.dice;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
+
+import com.relevantcodes.extentreports.ExtentReports;
+import com.relevantcodes.extentreports.ExtentTest;
+import com.relevantcodes.extentreports.LogStatus;
 
 import Automation.Pages.LoginPage;
 import Automation.Pages.ProfilePage;
@@ -15,13 +21,19 @@ public class ProfileTest extends BaseTest{
 	
 	LoginPage login;
 	ProfilePage profile;
+	
 
+
+
+	
 	
 	@BeforeMethod
 	public void TestSetup () throws Exception {
 		
 		login = new LoginPage(driver);
 		profile = new ProfilePage(driver);
+		
+	
 		
 		Initialize("testautomation@mailinator.com", "Test1234!!");
 		login.VerifyLoginEmailGreenCheck();
@@ -39,16 +51,16 @@ public class ProfileTest extends BaseTest{
 		profile.clickOnEditProfile();
 		profile.EnterFN("David");
 		profile.EnterLN("Smith");
-		profile.EnterPhN("777-777-7777");
 		profile.skill1("Facebook");
 		profile.skill2("twitter");
 		profile.skill3("Personal Website");
 		profile.skill4("Linkdin");
 		profile.clickonDonebttn();
-		VerifyTextOnthePagae("chris", true);
-		
+		boolean v = VerifyTextOnthePagae("David", true);
 		
 	}
+	
 
 
+	
 }

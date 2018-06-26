@@ -2,6 +2,7 @@ package Automation.base;
 
 import java.io.IOException;
 
+import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
@@ -14,7 +15,11 @@ import org.testng.Assert;
 import Automation.Pages.LoginPage;
 import Automation.utilites.Utility;
 
+
+
 public class BasePageObject<T> {
+	
+	
 	
 	protected WebDriver driver;
 	protected WebDriverWait wait;

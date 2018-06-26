@@ -8,10 +8,10 @@
 
   <test name="completeProfileTest" >
     <classes>
-       <class name="com.dice.ProfileTest" >
+       <class name="com.dice.LoginTest" >
        
        <methods>
-        <exclude name="completeProfileTest" />
+        <exclude name="negativeLoginTest" />
       </methods>
        
        </class>>

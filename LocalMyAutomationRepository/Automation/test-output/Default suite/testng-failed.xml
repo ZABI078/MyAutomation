@@ -3,14 +3,14 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.dice.ProfileTest">
+      <class name="com.dice.LoginTest">
         <methods>
-          <include name="completeProfileTest"/>
-          <include name="teardown"/>
           <include name="TestSetup"/>
+          <include name="teardown"/>
+          <include name="positiveLoginTest"/>
           <include name="SetupDriver"/>
         </methods>
-      </class> <!-- com.dice.ProfileTest -->
+      </class> <!-- com.dice.LoginTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
